@@ -1,0 +1,16 @@
+Project testdomain.com
+
+1. Clone projeсt to you PC
+git clone https://github.com/YuriiMO/testdomain.com.git
+
+2. enter the folder testdomain.com
+cd testdomain.com
+
+3. Add the local domain entry to the host (windows) or hosts (linux) file on your computer
+0.0.0.0  testdomain.com  www.testdomain.com
+(0.0.0.0 - should be replaced with your local computer ip address)
+
+4. start docker-compose
+docker-compose up -d
+
+5. Open your browser and go to testdomain.com
