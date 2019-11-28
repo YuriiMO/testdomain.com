@@ -13,11 +13,6 @@ services:
     restart: always
     depends_on:
       - php
-#    networks:
-#      - app-network
-#  certbot:
-#    image: certbot/certbot
-
 
   mysqldb:
     image: mysql
@@ -31,16 +26,8 @@ services:
       - MYSQL_DATABASE=testdata
       - MYSQL_USER=mysqluser
       - MYSQL_PASSWORD=mysqlpass
-#    networks:
-#      - app-network
 
   php:
     image: php:7.2-fpm
     volumes:
       - ./nginx/www:/var/www
-#    networks:
-#      - app-network
-
-#networks:
-#  app-network:
-#    driver: bridge
